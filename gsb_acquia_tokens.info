@@ -1,0 +1,6 @@
+name = GSB Acquia Tokens
+package = GSB
+core = 7.x
+description = "Adds some Acquia environment variables as tokens."
+
+dependencies[] = token

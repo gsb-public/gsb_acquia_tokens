@@ -1,0 +1,9 @@
+<?php
+
+function gsb_acquia_tokens_form_alter(&$form, &$form_state, $form_id) {
+  dsm($form_id);
+  // Let's add the acquia tokens to the simplesaml_auth settings page.
+  if ($form_id == '') {
+    $form['token_help']['help']['#tokens'][] = 'acquia';
+  }
+}
