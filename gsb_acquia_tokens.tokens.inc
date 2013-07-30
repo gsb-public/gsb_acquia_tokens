@@ -51,19 +51,19 @@ function gsb_acquia_tokens_tokens($type, $tokens, array $data = array(), array $
     foreach ($tokens as $name => $original) {
       switch ($name) {
         case 'site_name':
-          $replacements[$original] = $_ENV['AH_SITE_NAME'];
+          $replacements[$original] = isset($_ENV['AH_SITE_NAME']) ? $_ENV['AH_SITE_NAME'] : '';
           break;
         case 'site_group':
-          $replacements[$original] = $_ENV['AH_SITE_GROUP'];
+          $replacements[$original] = isset($_ENV['AH_SITE_GROUP']) ? $_ENV['AH_SITE_GROUP'] : '';
           break;
         case 'site_environment':
-          $replacements[$original] = $_ENV['AH_SITE_ENVIRONMENT'];
+          $replacements[$original] = isset($_ENV['AH_SITE_ENVIRONMENT']) ? $_ENV['AH_SITE_ENVIRONMENT'] : '';
           break;
         case 'non_production':
-          $replacements[$original] = $_ENV['AH_NON_PRODUCTION'];
+          $replacements[$original] = isset($_ENV['AH_NON_PRODUCTION']) ? $_ENV['AH_NON_PRODUCTION'] : '';
           break;
         case 'client_ip':
-          $replacements[$original] = $_ENV['AH_CLIENT_IP'];
+          $replacements[$original] = isset($_ENV['AH_CLIENT_IP']) ? $_ENV['AH_CLIENT_IP'] : '';
           break;
       }
     }
